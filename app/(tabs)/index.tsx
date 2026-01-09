@@ -1,9 +1,3 @@
-import { router } from "expo-router";
-import { ArrowDownLeft, ArrowUpRight, Plus } from "lucide-react-native";
-import React from "react";
-import { ScrollView, Text, TouchableOpacity, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
-
 import { CategoryIcon } from "@/components/ui/CategoryIcon";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { useAppSelector } from "@/store/hooks";
@@ -12,6 +6,11 @@ import {
   formatDate,
   getCurrentMonthTransactions,
 } from "@/utils";
+import { router } from "expo-router";
+import { ArrowDownLeft, ArrowUpRight, Plus } from "lucide-react-native";
+import React from "react";
+import { ScrollView, Text, TouchableOpacity, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function HomeScreen() {
   const transactions = useAppSelector((state) => state.transactions.items);
