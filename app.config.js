@@ -1,5 +1,6 @@
 export default {
   expo: {
+    owner: "cagsinho",
     name: "banking",
     slug: "banking",
     version: "1.0.0",
@@ -8,12 +9,21 @@ export default {
     scheme: "banking",
     userInterfaceStyle: "automatic",
     newArchEnabled: true,
+    updates: {
+      url: "https://u.expo.dev/620ea866-60db-4ade-8728-d0bb887fab48"
+    },
+    runtimeVersion: {
+      policy: "appVersion"
+    },
     ios: {
-      bundleIdentifier: "com.bankingapp.app",
+      infoPlist: {
+        ITSAppUsesNonExemptEncryption: false
+      },  
+      bundleIdentifier: "com.testbankapp.test",
       supportsTablet: true,
     },
     android: {
-      package: "com.bankingapp.app",
+      package: "com.testbankapp.test",
       adaptiveIcon: {
         backgroundColor: "#E6F4FE",
         foregroundImage: "./assets/images/android-icon-foreground.png",
@@ -26,6 +36,7 @@ export default {
     web: {
       output: "static",
       favicon: "./assets/images/favicon.png",
+      bundler: "metro",
     },
     plugins: [
       [
@@ -60,5 +71,10 @@ export default {
       typedRoutes: true,
       reactCompiler: true,
     },
+    extra:{
+      eas: {
+        "projectId": "620ea866-60db-4ade-8728-d0bb887fab48"
+      }
+    }
   },
 };
